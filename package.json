@@ -1,0 +1,160 @@
+{
+  "name": "esms-admin",
+  "version": "2.6.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:sit": "vue-cli-service build --mode production.sit",
+    "build:uat": "vue-cli-service build --mode production.uat",
+    "build:yunnan": "vue-cli-service build --mode production.yunnan",
+    "build:prod": "vue-cli-service build --mode production",
+    "build:aliyun": "vue-cli-service build --mode production.aliyun",
+    "build:yunpingtai": "vue-cli-service build --mode production.yunpingtai",
+    "build:jstest": "vue-cli-service build --mode production.jstest",
+    "build:pre": "vue-cli-service build --mode production.pre",
+    "build:lan": "vue-cli-service build --mode production.lan",
+    "lint": "vue-cli-service lint",
+    "et": "et",
+    "et:init": "et -i",
+    "et:list": "gulp themes"
+  },
+  "dependencies": {
+    "@antv/g2": "^4.1.34",
+    "@antv/g2plot": "^2.3.11",
+    "@antv/g6": "^4.2.1",
+    "@antv/l7": "2.2.11",
+    "@antv/l7-district": "2.2.11",
+    "@antv/l7-maps": "2.2.11",
+    "@antv/util": "^2.0.17",
+    "@riophae/vue-treeselect": "^0.4.0",
+    "@smallwei/avue": "2.8.22",
+    "address-parse": "^1.2.10",
+    "axios": "^0.18.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-component": "^1.1.1",
+    "compression-webpack-plugin": "^5.0.1",
+    "core-js": "^2.6.12",
+    "cos-js-sdk-v5": "^0.5.27",
+    "crypto-js": "^4.1.1",
+    "csvjson-json_beautifier": "^5.0.4",
+    "docxtemplater": "^3.21.1",
+    "docxtemplater-image-module-free": "^1.1.1",
+    "echarts": "^4.9.0",
+    "el-tree-transfer": "^2.4.7",
+    "element-theme": "^2.0.1",
+    "element-ui": "^2.15.6",
+    "eslint-plugin-vue": "^6.2.2",
+    "file-saver": "^2.0.5",
+    "good-storage": "^1.1.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-load-plugins": "^2.0.5",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.0",
+    "html2canvas": "^1.4.1",
+    "insert-css": "^2.0.0",
+    "jquery": "^3.5.1",
+    "js-cookie": "^2.2.1",
+    "jszip": "^3.6.0",
+    "jszip-utils": "^0.1.0",
+    "lodash": "^4.17.20",
+    "monaco-editor": "^0.21.3",
+    "mta-h5-analysis": "^2.0.19",
+    "pizzip": "^3.0.6",
+    "postcss-pxtorem": "^5.1.1",
+    "qrcodejs2": "^0.0.2",
+    "qs": "^6.9.6",
+    "quill": "^1.3.7",
+    "recordrtc": "^5.6.1",
+    "screenfull": "^4.2.1",
+    "sm-crypto": "^0.3.5",
+    "svg-sprite-loader": "^4.3.0",
+    "tim-js-sdk": "^2.10.1",
+    "tim-upload-plugin": "^1.0.2",
+    "trtc-calling-js": "^0.6.0",
+    "trtc-js-sdk": "^4.7.1",
+    "tsignaling": "^0.3.0",
+    "v-charts": "^1.19.0",
+    "v-jsoneditor": "^1.4.2",
+    "vue": "^2.6.12",
+    "vue-avatar": "^2.3.3",
+    "vue-cron": "^1.0.9",
+    "vue-i18n": "^8.22.4",
+    "vue-router": "^3.5.1",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.6.2",
+    "wangeditor": "4.7.15"
+  },
+  "devDependencies": {
+    "@antv/data-set": "^0.11.8",
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-eslint": "^3.12.1",
+    "@vue/cli-service": "^3.12.1",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-polyfill": "^6.26.0",
+    "compression-webpack-plugin": "^5.0.1",
+    "element-theme-chalk": "^2.15.0",
+    "eslint": "^7.19.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.15",
+    "natives": "^1.1.6",
+    "px2rem-loader": "^0.1.9",
+    "sass": "^1.32.13",
+    "sass-loader": "7.3.1",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "vue-print-nb": "^1.5.0",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "engines": {
+    "node": ">= 8.11.1",
+    "npm": ">= 5.6.0"
+  },
+  "browserslist": [
+    "> 1% in CN",
+    "last 2 versions",
+    "not ie <= 10",
+    "Firefox >= 20",
+    "iOS 7"
+  ],
+  "element-theme": {
+    "config": "./src/element-ui/theme-variables.scss",
+    "out": "./src/element-ui/theme",
+    "minimize": true,
+    "browsers": [
+      "> 1%",
+      "last 2 versions",
+      "not ie <= 10"
+    ]
+  },
+  "description": "{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/futurecreative/esms-pcweb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

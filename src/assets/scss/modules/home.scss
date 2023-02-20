@@ -1,0 +1,211 @@
+.mod-home {
+    table {
+        width: 100%;
+        border: 1px solid $--border-color-lighter;
+        border-collapse: collapse;
+        th,
+        td {
+            padding: 12px 10px;
+            border: 1px solid $--border-color-lighter;
+        }
+        th {
+            width: 30%;
+        }
+    }
+}
+
+// 文库百科
+.library-content {
+    margin-left: 225px;
+    margin-right: 195px;
+}
+
+.library-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    display: block;
+    text-align: left;
+}
+
+.library-content-title {
+    margin: 5px 5px;
+    font-size: 18px;
+    font-weight: 500;
+    //line-height: 39.6px;
+    background-color: #e9ebf1;
+    padding: 5px 10px 5px 8px;
+}
+
+.library-content-font {
+    line-height: 24px;
+    padding: 5px 20px 10px;
+}
+
+.library-add-button {
+    width: 100%;
+    margin-top: 10px
+}
+
+.library-detail-category {
+    width: 220px;
+    position: fixed;
+    .el-tree-node__label {
+        font-size: 12px
+    }
+}
+
+.library-detail-directory {
+    width: 190px;
+    position: fixed;
+    top: 100px;
+    right: 5px;
+    margin: auto;
+    .el-link {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    max-height: 500px;
+    overflow: auto;
+}
+
+.library-detail-directory-title {
+    font-size: 18px;
+    text-align: center;
+}
+
+// 调查表填写
+.aui-wrapper {
+    &.aui-sidebar--fold .fill-header {
+        left: 80px;
+    }
+}
+
+.fill-content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 88px;
+}
+
+.fill-header {
+    // z-index: 10;
+    // position: fixed;
+    // top: 88px;
+    // padding: 15px 0;
+    // background-color: #f1f4f5;
+    // right: 10px;
+    // left: 245px;
+    // text-align: center;
+}
+
+.fill-video {
+    position: absolute;
+    min-height: 1px;
+    width: 233px;
+    z-index: 1000;
+    video {
+        width: 233px;
+        height: 250px;
+    }
+}
+
+.fill-form {
+    //margin-top: 90px;
+    //margin-left: 195px;
+    //margin-right: 195px;
+    width: calc(100% - 300px - 180px);
+    overflow-y: scroll;
+}
+
+.fill-directory {
+    width: 250px;
+    overflow-y: hidden;
+    .fill-directory-card {
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        overflow-y: scroll;
+    }
+}
+
+.fill-content,
+.fill-form,
+.fill-directory-card {
+    height: calc(100vh - 200px);
+}
+
+// .fill-form, .fill-directory {
+//   padding-left: 15px;
+// }
+.fill-directory-card {}
+
+// 调查表详情
+.aui-wrapper {
+    &.aui-sidebar--fold .questionnaire-detail-header {
+        left: 270px;
+    }
+}
+
+.questionnaire-detail-header {
+    // z-index: 10;
+    // position: fixed;
+    // top: 88px;
+    // padding: 15px 0;
+    // background-color: #f1f4f5;
+    // right: 10px;
+    // left: 0;
+    // text-align: center;
+}
+
+.questionnaire-content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.questionnaire-form {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.questionnaire-directory {
+    width: 250px;
+    overflow-y: hidden;
+    .questionnaire-directory-card {
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        overflow-y: scroll;
+        .questionnaire-directory-row {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.questionnaire-content,
+.questionnaire-form,
+.questionnaire-directory-card {
+    height: calc(100vh - 100px);
+}
+
+
+/*.questionnaire-detail-directory {
+  width: 190px;
+  position: fixed;
+  top: 15px;
+  right: 5px;
+  margin-top: 90px;
+}*/

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="<%= BASE_URL %>css/font.css"> -->
+    <link rel="shortcut icon" href="<%= BASE_URL %>favicon.ico" />
+    <!-- 站点配置 -->
+    <script>
+      window.SITE_CONFIG = {};
+      window.SITE_CONFIG["version"] = "v2.6.0";
+      window.SITE_CONFIG["nodeEnv"] = "<%= process.env.VUE_APP_NODE_ENV %>";
+      window.SITE_CONFIG["uploadURL"] = "";
+      window.SITE_CONFIG["singleUploadURL"] = "";
+      // window.SITE_CONFIG['apiURL'] = 'http://localhost:8080/esms-admin'; // api请求地址
+      window.SITE_CONFIG["storeState"] = {}; // vuex本地储存初始化状态（用于不刷新页面的情况下，也能重置初始化项目中所有状态）
+      window.SITE_CONFIG["contentTabDefault"] = {
+        // 内容标签页默认属性对象
+        name: "", // 名称, 由 this.$route.name 自动赋值（默认，名称 === 路由名称 === 路由路径）
+        params: {}, // 参数, 由 this.$route.params 自动赋值
+        query: {}, // 查询参数, 由 this.$route.query 自动赋值
+        menuId: "", // 菜单id（用于选中侧边栏菜单，与this.$store.state.sidebarMenuActiveName进行匹配）
+        title: "", // 标题
+        isTab: true, // 是否通过tab展示内容?
+        iframeURL: "", // 是否通过iframe嵌套展示内容? (以http[s]://开头, 自动匹配)
+      };
+      window.SITE_CONFIG["menuList"] = []; // 左侧菜单列表（后台返回，未做处理）
+      window.SITE_CONFIG["permissions"] = []; // 页面按钮操作权限（后台返回，未做处理）
+      window.SITE_CONFIG["dynamicRoutes"] = []; // 动态路由列表
+      window.SITE_CONFIG["dynamicMenuRoutes"] = []; // 动态(菜单)路由列表
+      window.SITE_CONFIG["dynamicMenuRoutesHasAdded"] = false; // 动态(菜单)路由是否已经添加的状态标示（用于判断是否需要重新拉取数据并进行动态添加操作）
+      window.SITE_CONFIG["surveyForm"] = [];
+      window.SITE_CONFIG["userDefHeadImgUrl"] = ""; //用户默认头像
+    </script>
+
+    <!-- 开发环境 -->
+    <% if (process.env.VUE_APP_NODE_ENV === 'dev') { %>
+    <script>
+      // window.SITE_CONFIG["apiURL"] = "http://192.168.2.79:8280/covid19-admin";
+      // window.SITE_CONFIG["apiURL"] = "https://www.jingshuosz.cn/covid19-admin";
+      window.SITE_CONFIG["apiURL"] = "https://www.jingshuosz.cn/covid19-admin";
+
+      // WebSocket地址
+      // window.SITE_CONFIG["socketURL"] =
+      //   "ws://192.168.2.79:8280/covid19-admin/websocket";
+      window.SITE_CONFIG["socketURL"] =
+        "wss://www.jingshuosz.cn/covid19-admin/websocket";
+      // 文件上传URL
+      window.SITE_CONFIG["uploadURL"] = "https://www.jingshuosz.cn/covid19-file/upload";
+      window.SITE_CONFIG["singleUploadURL"] =
+        "https://www.jingshuosz.cn/covid19-file/upload/single";
+      window.SITE_CONFIG["timSDKAppID"] = 1400758277;
+
+      window.SITE_CONFIG["tencentClientId"] =
+        "d22125f9b3e64a3da07ac91b543ff22e";
+      // window.SITE_CONFIG["wordUrl"] =
+      //   "https://futurecreative.cn/covid19-admin/tencentWord/getToken";
+      // window.SITE_CONFIG["wordRedirectUrl"] =
+      //   "http://localhost:8001/#/dashbord/dashbord";
+
+      window.SITE_CONFIG["wordUrl"] = "https://www.jingshuosz.cn";
+      window.SITE_CONFIG["wordRedirectUrl"] =
+        "https://www.jingshuosz.cn/web/?#/dashbord/dashbord";
+
+      // window.SITE_CONFIG["singleUploadURL"] =
+      //   "http://epi-investigation.chinacdc.cn:18080/covid19-file/upload/single";
+      // window.SITE_CONFIG["uploadURL"] =
+      //   "http://epi-investigation.chinacdc.cn:18080/covid19-file/upload";
+      // window.SITE_CONFIG["timSDKAppID"] = 1400587060;
+
+      // window.SITE_CONFIG["tencentClientId"] =
+      //   "ecf96c8309ff4d53a8355709df564938";
+      // window.SITE_CONFIG["wordUrl"] = "https://css.sxndac.cn";
+      // window.SITE_CONFIG["wordRedirectUrl"] =
+      //   "https://css.sxndac.cn/web/?#/dashbord/dashbord";
+    </script>
+    <script type="text/javascript">
+      window._AMapSecurityConfig = {
+        serviceHost: "https://www.jingshuosz.cn/_AMapService",
+      };
+    </script>
+    <% } %>
+    <!-- 集成测试环境 -->
+    <% if (process.env.VUE_APP_NODE_ENV === 'prod:sit') { %>
+    <script>
+      // window.SITE_CONFIG['apiURL'] = 'https://192.168.2.67:8280/covid19-admin';
+      window.SITE_CONFIG["apiURL"] = "https://www.jingshuosz.cn/covid19-admin";
+
+      // WebSocket地址
+      window.SITE_CONFIG["socketURL"] =
+        "wss://www.jingshuosz.cn/covid19-admin/websocket";
+      // 文件上传URL
+      window.SITE_CONFIG["singleUploadURL"] =
+        "https://www.jingshuosz.cn/covid19-file/upload/single";
+      window.SITE_CONFIG["uploadURL"] =
+        "https://www.jingshuosz.cn/covid19-file/upload";
+      window.SITE_CONFIG["timSDKAppID"] = 1400758277;
+
+      window.SITE_CONFIG["tencentClientId"] =
+        "81e0f85a847e4490a12c885aaf6061d0";
+      window.SITE_CONFIG["wordUrl"] = "https://www.jingshuosz.cn";
+      window.SITE_CONFIG["wordRedirectUrl"] =
+        "https://www.jingshuosz.cn/web/?#/dashbord/dashbord";
+    </script>
+    <script type="text/javascript">
+      window._AMapSecurityConfig = {
+        serviceHost: "https://www.jingshuosz.cn/_AMapService",
+      };
+    </script>
+    <% } %>
+    <!-- 中疾控预发布环境 -->
+    <% if (process.env.VUE_APP_NODE_ENV === 'prod:pre') { %>
+    <script>
+      // window.SITE_CONFIG['apiURL'] = 'https://192.168.2.67:8280/covid19-admin';
+      window.SITE_CONFIG["apiURL"] = "https://css.sxndac.cn/covid19-admin";
+
+      // WebSocket地址
+      window.SITE_CONFIG["socketURL"] =
+        "wss://css.sxndac.cn/covid19-admin/websocket";
+      // 文件上传URL
+      window.SITE_CONFIG["singleUploadURL"] =
+        "https://css.sxndac.cn/covid19-file/upload/single";
+      window.SITE_CONFIG["uploadURL"] =
+        "https://css.sxndac.cn/covid19-file/upload";
+      window.SITE_CONFIG["timSDKAppID"] = 1400587060;
+
+      window.SITE_CONFIG["tencentClientId"] =
+        "ecf96c8309ff4d53a8355709df564938";
+      window.SITE_CONFIG["wordUrl"] = "https://css.sxndac.cn";
+      window.SITE_CONFIG["wordRedirectUrl"] =
+        "https://css.sxndac.cn/web/?#/dashbord/dashbord";
+    </script>
+    <script type="text/javascript">
+      window._AMapSecurityConfig = {
+        serviceHost: "https://www.jingshuosz.cn/_AMapService",
+      };
+    </script>
+    <% } %>
+
+    <!-- 中疾控局域网环境 -->
+    <% if (process.env.VUE_APP_NODE_ENV === 'prod:lan') { %>
+    <script>
+      window.SITE_CONFIG["apiURL"] = "https://192.168.2.67:8280/covid19-admin";
+
+      // WebSocket地址
+      window.SITE_CONFIG["socketURL"] =
+        "ws://192.168.2.136/covid19-admin/websocket";
+
+      // 文件上传URL
+      window.SITE_CONFIG["singleUploadURL"] =
+        "http://192.168.2.136/covid19-file/upload/single";
+      window.SITE_CONFIG["uploadURL"] =
+        "http://192.168.2.136/covid19-file/upload";
+      window.SITE_CONFIG["timSDKAppID"] = 1400587060;
+
+      window.SITE_CONFIG["tencentClientId"] =
+        "ecf96c8309ff4d53a8355709df564938";
+      window.SITE_CONFIG["wordUrl"] = "https://css.sxndac.cn";
+      window.SITE_CONFIG["wordRedirectUrl"] =
+        "https://css.sxndac.cn/web/?#/dashbord/dashbord";
+    </script>
+    <script type="text/javascript">
+      window._AMapSecurityConfig = {
+        serviceHost: "https://www.jingshuosz.cn/_AMapService",
+      };
+    </script>
+    <% } %>
+
+    <!-- 中疾控生产环境 -->
+    <% if (process.env.VUE_APP_NODE_ENV === 'prod') { %>
+    <script>
+      window.SITE_CONFIG["apiURL"] =
+        "http://192.168.0.10:18080/covid19-admin";
+
+      // WebSocket地址
+      window.SITE_CONFIG["socketURL"] =
+        "wss://192.168.0.10:18080/covid19-admin/websocket";
+      // 文件上传URL
+      window.SITE_CONFIG["singleUploadURL"] =
+        "http://192.168.0.10:18080/covid19-file/upload/single";
+      window.SITE_CONFIG["uploadURL"] =
+        "http://192.168.0.10:18080/covid19-file/upload";
+      window.SITE_CONFIG["timSDKAppID"] = 1400645842;
+
+      window.SITE_CONFIG["tencentClientId"] =
+        "db044e593d454c119c44edc29fb32b8e";
+      window.SITE_CONFIG["wordUrl"] = "https://epi-investigation.chinacdc.cn";
+      window.SITE_CONFIG["wordRedirectUrl"] =
+        "https://epi-investigation.chinacdc.cn/admin/?#/dashbord/dashbord";
+    </script>
+    <script type="text/javascript">
+      window._AMapSecurityConfig = {
+        serviceHost: "http://192.168.0.10:18080/_AMapService",
+      };
+    </script>
+    <% } %>
+    <script
+      type="text/javascript"
+      src="https://webapi.amap.com/maps?v=1.4.15&key=a7437088737700f3607391d1dfdd1b89&plugin=AMap.PlaceSearch,AMap.CircleEditor"
+    ></script>
+    <script src="https://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <!-- <script
+      type="text/javascript"
+      src="https://avuejs.com/cdn/aliyun-oss-sdk.min.js"
+    ></script> -->
+    <script src="https://avuejs.com/cdn/CryptoJS.js"></script>
+    <script src="js/FileSaver-1.3.8.min.js"></script>
+    <script src="js/xlsx.full-0.14.1.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap-material-design.js"></script>
+    <script src="js/trtc.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/rtc-client.js"></script>
+    <script src="js/share-client.js"></script>
+    <script src="js/presetting.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

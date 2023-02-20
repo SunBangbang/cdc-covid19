@@ -1,0 +1,771 @@
+// .task-management {
+//   & .avue-crud__menu {
+//     display: none
+//   }
+//   & .avue-crud__search {
+//     margin-left: -10px;
+//     label {
+//      display: none;
+//     }
+//     .el-form-item__content {
+//       margin-left: 0!important;
+//     }
+//   }
+// }
+.dangerBtn {
+    color: #FF3300;
+}
+
+.taskInfoForm {
+    & .el-input,
+    & .avue-date,
+    .el-select-dropdown {
+        width: 340px!important;
+    }
+    & .avue-ueditor {
+        width: 100%;
+      .w-e-text-container{
+        height: 150px!important;
+      }
+    }
+
+    .investItemForm {
+        width: 79%;
+        .avue-form__group {
+            margin-left: -10px;
+        }
+        .avue-dynamic {
+            margin-left: 1px;
+        }
+        .avue-form__menu,
+        .avue-crud__pagination {
+            height: 0;
+            padding: 0;
+        }
+        .avue-crud__empty {
+            padding: 10px 0;
+        }
+    }
+    & .avue-dynamic .el-input {
+        width: 100% !important;
+    }
+}
+
+.finished-block .btn-box .el-button--mini {
+    padding: 7px 48px;
+}
+
+.audio-container {
+    .el-carousel__container {
+        height: 80px;
+        .el-carousel__arrow {
+            display: none;
+        }
+    }
+}
+
+.height52 .el-progress {
+    line-height: 52px;
+}
+
+.aui-navbar--colorful .aui-navbar__menu .el-menu-item i[class^='el-icon-'] {
+    vertical-align: middle;
+    margin-right: 0;
+}
+
+.form-designer .widget-form-container .widget-form-list .widget-form-table__item:after {
+    z-index: unset!important;
+}
+
+.el-menu--horizontal>.el-menu-item.link {
+    padding: 0;
+}
+
+.el-menu--horizontal>.el-menu-item.link a {
+    display: block;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.el-menu--horizontal>li:first-child {
+    padding-top: 2px;
+    margin-right: 10px;
+}
+
+.selectedTaskForm {
+    .avue-crud {
+        width: 100%;
+    }
+    .cell div {
+        width: 100%;
+    }
+    .el-col {
+        padding: 0!important;
+    }
+    .el-table__fixed-header-wrapper {
+        table thead tr th:first-child {
+            border-bottom: unset;
+        }
+        button {
+            display: none;
+        }
+    }
+    .avue-crud__pagination {
+        display: none;
+    }
+}
+
+.el-table th.list-header {
+    background: #fff!important;
+    border-bottom: unset!important;
+    padding: 0;
+    color: #606266;
+    font-weight: normal;
+    .cell {
+        line-height: 1em;
+    }
+}
+
+.el-table .list-content td {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    border-bottom: unset;
+    padding: 12px 0 0;
+    .cell {
+        >div {
+            >span {
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+.list-item.content {
+    .avue-crud__menu {
+        display: none;
+    }
+    .avue-crud__pagination {
+        display: none;
+    }
+    .el-table:before {
+        background-color: #fff;
+        ;
+    }
+}
+
+// 分析记录详情el-card
+.page-content>.aui-card--fill>.el-card__body {
+    min-height: calc(calc(100vh - 50px - 38px - 30px) - 2px);
+}
+.aui-card--fill--back {
+  min-height: calc(100vh - 50px - 38px - 25px)!important;
+}
+.aui-wrapper {
+    .analysis-record-container .header-top {
+        width: calc(100% - 250px - 15px);
+    }
+    &.aui-sidebar--fold .header-top {
+        width: calc(100% - 84px - 15px);
+    }
+}
+
+.page-content_filter .el-tabs__content {
+    min-height: 300px;
+}
+
+// header-list
+.hover-show .el-table--scrollable-x .el-table__body-wrapper {
+    overflow-x: hidden;
+    ;
+}
+
+.track-create-container {
+    & .el-radio--small.is-bordered {
+        margin-right: 20px;
+    }
+    & .el-radio--small.is-bordered:last-child {
+        margin-right: 0;
+    }
+    .el-form-item--small.el-form-item {
+        margin-bottom: 8px;
+    }
+    .el-dialog__body {
+        padding: 30px 20px 10px;
+        .avue-form__menu {
+            display: none;
+        }
+    }
+}
+
+.covid-form-container {
+    .form-tabs-container {
+        .el-radio-group {
+            width: 100%;
+            .el-radio-button {
+                width: 16%;
+                .el-radio-button__inner {
+                    width: 100%;
+                    padding: 8px;
+                    box-sizing: border-box;
+                    >div {
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.el-select.w100,
+.el-input-number.w100 {
+    width: 100%!important;
+}
+
+
+/*.dialog-footer {
+    text-align: left;
+    button {
+        width: 100%;
+    }
+}*/
+
+.staff-table {
+    .el-table__empty-block {
+        border-bottom: 1px solid #EBEEF5;
+    }
+}
+
+.el-table__body-wrapper {
+    overflow-x: auto;
+    z-index: 1;
+}
+
+// //滚动条整体样式
+// .el-table__body-wrapper::-webkit-scrollbar {
+//     width: 15px;
+//     /*滚动条宽度*/
+//     height: 18px;
+//     /*滚动条高度*/
+//     z-index: 10;
+// }
+// //滚动条上的按钮
+// .el-table__body-wrapper::-webkit-scrollbar-button {
+//     //  background-color: #000;
+//     background-color: #eee;
+// }
+// .el-table__body-wrapper::-webkit-scrollbar-button:start {
+//     width: 18px;
+//     height: 10px;
+//     padding: 2px;
+//     background: #F0F0F0 url(../image/arrow-left.png) no-repeat 0 1px;
+// }
+// .el-table__body-wrapper::-webkit-scrollbar-button:start:hover,
+// .el-table__body-wrapper::-webkit-scrollbar-button:end:hover {
+//     background-color: #CFCFCF;
+// }
+// .el-table__body-wrapper::-webkit-scrollbar-button:end {
+//     width: 18px;
+//     height: 15px;
+//     padding: 2px;
+//     background: #F0F0F0 url(../image/arrow-right.png) no-repeat 2px 1px;
+// }
+// //滚动条滑块
+// .el-table__body-wrapper::-webkit-scrollbar-thumb {
+//     border-radius: 0px;
+//     /*滚动条的背景区域的圆角*/
+//     background-color: rgba(193, 193, 193, 0.8);
+//     /*滚动条的背景颜色*/
+// }
+// //滚动条里面轨道
+// .el-table__body-wrapper::-webkit-scrollbar-track {
+//     // box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+//     border-radius: 0px;
+//     background: #F0F0F0;
+//     height: 30px;
+// }
+.el-table__fixed-right::before,
+.el-table__fixed::before {
+    background-color: unset!important;
+}
+
+.el-table__fixed-right .el-table--border td {
+    border-right: 1px solid #EBEEF5;
+}
+//.avue-form__menu{
+//  .el-button {
+//    .el-icon-search {
+//      display: none!important;
+//    }
+//  }
+//}
+.cases-treatment-container {
+    .map-select {
+        display: block;
+        .el-input-group {
+            display: inline-table;
+        }
+        .el-input__inner {
+            display: table-cell;
+        }
+        .el-input-group__append {
+            display: table-cell;
+            width: 82px;
+        }
+    }
+}
+.avue-crud__menu {
+  .avue-crud__left {
+    .el-button {
+      margin-right: 20px!important;
+    }
+  }
+}
+.avue-form__row {
+  padding-left: 0!important;
+}
+.avue-map__dialog {
+    .el-dialog__body {
+        padding: 0 20px 30px 20px;
+    }
+}
+.avue-crud__menu {
+  height: fit-content;
+  min-height: 0;
+}
+.avue-crud {
+  .el-card {
+    margin-top: 0!important;
+  }
+}
+.avue-dialog {
+  top: 0 !important;
+}
+.avue-dialog .el-dialog__header {
+  border-bottom: #aaa 1px solid;
+  .avue-crud__dialog__header {
+    .avue-crud__dialog__menu {
+      .el-icon-full-screen {
+        display: none;
+      }
+    }
+  }
+}
+.avue-dialog__footer--right {
+  border-top: unset;
+  padding-bottom: 20px!important;
+  padding-right: 20px!important;
+  .el-button {
+    i {
+      display: none!important;
+    }
+    span {
+      margin-left: 0!important;
+    }
+  }
+}
+.el-dialog__body__avue-form {
+  .avue-form__menu {
+    padding-right: 0!important;
+    .el-form-item {
+      margin-bottom: 0!important;
+    }
+    .el-button {
+      i {
+        display: none!important;
+      }
+      span {
+        margin-left: 0!important;
+      }
+    }
+  }
+}
+
+.el-radio-button--mini .el-radio-button__inner {
+    margin-top: 3px;
+    padding: 4px 8px;
+}
+
+.right-bar .el-radio-button:first-child .el-radio-button__inner {
+    border-radius: 10px 0 0 10px;
+}
+
+.right-bar .el-radio-button:last-child .el-radio-button__inner {
+    border-radius: 0 10px 10px 0;
+}
+
+// 消息通知table
+.message-list {
+    height: calc(100vh - 125px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    .el-link--inner {
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+}
+
+//用户管理 所属组织
+.treeSelectClass {
+    line-height: 28px;
+    vertical-align: middle;
+    display: inline-block;
+    &.vue-treeselect--multi .vue-treeselect__input {
+        padding: 0;
+    }
+    .vue-treeselect__input-container {
+        padding-top: 0;
+        vertical-align: middle;
+    }
+    .vue-treeselect__control {
+        height: 28px;
+        .vue-treeselect__placeholder {
+            font-size: 12px;
+            line-height: 28px;
+        }
+        &.vue-treeselect--searchable .vue-treeselect__input-container {
+            display: none;
+        }
+        &.vue-treeselect--multi .vue-treeselect__input-container {
+            vertical-align: middle;
+        }
+        .vue-treeselect__multi-value {
+            margin-bottom: 0;
+            .vue-treeselect__multi-value-item-container {
+                line-height: 28px;
+                padding-top: 0;
+                .vue-treeselect__multi-value-item {
+                    box-sizing: border-box;
+                    height: 28px;
+                    padding: 0;
+                    border: unset;
+                }
+            }
+        }
+    }
+    &.vue-treeselect--searchable.vue-treeselect--multi.vue-treeselect--has-value .vue-treeselect__input-container {
+        padding-top: 0px;
+    }
+}
+
+.IMDialog {
+    border-radius: 2px;
+    .el-dialog__header {
+        padding: 5px 5px 5px;
+        text-align: center;
+        .el-dialog__title {
+            line-height: 0px;
+            font-size: 10px;
+            color: #00AAFE;
+        }
+        .el-dialog__headerbtn {
+            top: 38px;
+            z-index: 999;
+            font-size: 20px;
+        }
+    }
+    .el-dialog__body {
+        padding: 0px 0px;
+    }
+}
+
+.chat-box {
+    .el-dialog__header {
+        padding: 0px;
+    }
+    .el-dialog__headerbtn .el-dialog__close {
+        position: relative;
+        top: -23px;
+    }
+}
+
+.connect-drawer {
+    .el-drawer__header {
+        margin-bottom: 0px;
+        padding: 10px 5px 0;
+    }
+    .el-drawer__close-btn {
+        font-size: 0px
+    }
+}
+
+.avue-connector-tree {
+  -webkit-user-select: none;
+
+  -moz-user-select: none;
+
+  -ms-user-select: none;
+
+  user-select: none;
+    .el-input-group__append {
+        display: none;
+    }
+    .el-tree-node__label {
+        height: 15px;
+    }
+  .el-tree-node__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+    padding-top: 0;
+  }
+  .el-tree-node.is-current>.el-tree-node__content {
+    color: #1bb0cb;
+    background-color: #F5F7FA;
+  }
+  .el-scrollbar__wrap {
+    overflow: auto;
+    height: 100%;
+  }
+}
+
+#form-design {
+    overflow: hidden;
+    height: calc(100vh - 100px);
+    .form-designer {
+        .fields-list,
+        .widget-container,
+        .widget-config-container {
+            overflow-y: auto;
+        }
+    }
+}
+
+// 调查表展示页，子表单为form，label的字体
+.dynamic-form-item {
+    .el-form-item__label {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 25px;
+    }
+    .el-form-item__content {
+        line-height: 25px;
+        padding-bottom: 1px;
+    }
+}
+
+.analysisCard {
+    .el-card__body {
+        height: 568px;
+        margin: 15px;
+        min-height: auto;
+        border: 1px solid #DCDFE6;
+        border-color: #EBEEF5;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+}
+
+.el-table .el-table__row .cell .el-switch {
+    line-height: unset;
+    height: unset;
+}
+
+//滚动条整体样式
+::-webkit-scrollbar {
+    width: 8px;
+    /*滚动条宽度*/
+    height: 8px;
+    /*滚动条高度*/
+    z-index: 10;
+}
+
+//滚动条上的按钮
+::-webkit-scrollbar-button {
+    //  background-color: #000;
+    background-color: #eee;
+}
+
+::-webkit-scrollbar-button:start {
+    width: 0px;
+    height: 10px;
+    padding: 2px;
+    // background: #F0F0F0 url(../image/arrow-left.png) no-repeat 0 1px;
+}
+
+::-webkit-scrollbar-button:start:hover,
+::-webkit-scrollbar-button:end:hover {
+    background-color: #CFCFCF;
+}
+
+::-webkit-scrollbar-button:end {
+    width: 18px;
+    height: 15px;
+    padding: 2px;
+    // background: #F0F0F0 url(../image/arrow-right.png) no-repeat 2px 1px;
+}
+
+//滚动条滑块
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    /*滚动条的背景区域的圆角*/
+    background-color: rgba(193, 193, 193, 0.8);
+    /*滚动条的背景颜色*/
+    border-radius: 6px
+}
+
+//滚动条里面轨道
+::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    background: #F0F0F0;
+    height: 30px;
+}
+
+.aui-content__wrapper {
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+}
+
+.page-content_filter .el-tabs--border-card{
+    border: unset;
+}
+
+// 隐藏avue-search label
+.hide-search-label-container {
+    &.avue-crud {
+        width: 100%;
+        .avue-crud__search {
+            .avue-form__group {
+                margin-left: -10px;
+                label {
+                    display: none;
+                    width: 0!important;
+                }
+                .el-form-item__content {
+                    margin-left: 0!important;
+                }
+            }
+        }
+    }
+}
+// table中 行选择checkbox 居中
+.is-center.el-table-column--selection .el-checkbox:last-of-type{
+    margin: 0;
+}
+
+//隐藏table border
+.border-hidden .el-table td{
+    border: 0;
+}
+
+//隐藏 富文本编辑器的 源代码和全屏按钮
+.w-e-menu {
+    ._wangEditor_btn_sourcecode, ._wangEditor_btn_fullscreen{
+        display: none!important;
+    }
+}
+
+//turquoise 主题下左侧菜单颜色dark
+.aui-sidebar--dark {
+    background-color: #446F95!important;
+}
+
+.aui-sidebar--dark .aui-sidebar__menu,.aui-sidebar--dark>.el-menu--popup {
+    background-color: #446f95!important;
+}
+
+.aui-sidebar--dark .aui-sidebar__menu .el-menu-item,.aui-sidebar--dark .aui-sidebar__menu .el-submenu>.el-submenu__title,.aui-sidebar--dark>.el-menu--popup .el-menu-item,.aui-sidebar--dark>.el-menu--popup .el-submenu>.el-submenu__title {
+    color: #fff!important;
+}
+
+.aui-sidebar--dark .aui-sidebar__menu .el-menu-item:focus,.aui-sidebar--dark .aui-sidebar__menu .el-menu-item:hover,.aui-sidebar--dark .aui-sidebar__menu .el-submenu>.el-submenu__title:focus,.aui-sidebar--dark .aui-sidebar__menu .el-submenu>.el-submenu__title:hover,.aui-sidebar--dark>.el-menu--popup .el-menu-item:focus,.aui-sidebar--dark>.el-menu--popup .el-menu-item:hover,.aui-sidebar--dark>.el-menu--popup .el-submenu>.el-submenu__title:focus,.aui-sidebar--dark>.el-menu--popup .el-submenu>.el-submenu__title:hover {
+    color: #fff!important;
+    background-color: #6985A2!important;
+}
+
+.aui-sidebar--dark .aui-sidebar__menu .el-menu,.aui-sidebar--dark .aui-sidebar__menu .el-submenu.is-opened,.aui-sidebar--dark>.el-menu--popup .el-menu,.aui-sidebar--dark>.el-menu--popup .el-submenu.is-opened {
+    background-color: #4d6f92!important;
+}
+
+.aui-sidebar--dark .aui-sidebar__menu .el-menu-item.is-active,.aui-sidebar--dark .aui-sidebar__menu .el-submenu.is-active>.el-submenu__title,.aui-sidebar--dark>.el-menu--popup .el-menu-item.is-active,.aui-sidebar--dark>.el-menu--popup .el-submenu.is-active>.el-submenu__title {
+    color: #fff!important;
+}
+
+// 仪表盘
+ .dash-container{
+    .el-radio-group {
+        .el-radio-button {
+            &.el-radio-button--mini {
+                .el-radio-button__inner{
+                    padding: 4px 8px !important;
+                    border-radius: 0 4px 4px 0 !important;
+                }
+            }
+        }
+
+    }
+
+}
+//table 滚动条左下角和右下角有白条
+.hscrollbar-table {
+    .el-table__fixed,
+    .el-table__fixed-right {
+        height: calc(100% - 8px)!important;
+    }
+}
+
+
+.form-design {
+    .el-container.is-vertical {
+        background-color: azure;
+        margin: 0 1% 0 1%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+// 消息通知 显示条数
+.el-badge__content.is-fixed {
+    margin-top: 10px;
+}
+
+.el-dialog__header{
+    border-bottom: 1px solid #aaa;
+}
+
+.aui-card--fill .el-card__header{
+  font-size: 15px;
+  padding: 10px 20px;
+  height: 40px !important
+}
+
+.avue-upload {
+    .el-upload__tip{
+        color: #ff4444;
+    }
+}
+
+.live-required {
+    color: #aa2116;
+    font-weight: bold;
+}
+
+.live-group {
+  color: #f15b6c;
+}
+
+.task-form {
+    .el-step {
+        .el-step__title:hover {
+            color: #67c23a;
+            border-color: #67c23a;
+            cursor: pointer;
+        }
+    }
+}
+.text-p {
+    margin: 10px 0;
+    font-size: 14px;
+}
